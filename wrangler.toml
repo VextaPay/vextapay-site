@@ -1,4 +1,4 @@
-name = "vextapay-site"
+name = "vexa"
 main = "src/index.js"
 account_id = "a927a83a7724b1203dced6ab32351e5d"
 workers_dev = true

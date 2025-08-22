@@ -1,7 +1,5 @@
 name = "vextapay-site"
+main = "src/index.js"
 account_id = "a927a83a7724b1203dced6ab32351e5d"
 workers_dev = true
 compatibility_date = "2025-08-22"
-
-[site]
-bucket = "./out"

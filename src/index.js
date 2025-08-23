@@ -1,6 +1,6 @@
 /**
  * VextaPay Landing Page Worker
- * Serves a professional static HTML landing page with SEO optimization.
+ * Professional static landing page with SEO, FAQ, and structured sections.
  */
 
 const html = `<!DOCTYPE html>
@@ -34,11 +34,7 @@ const html = `<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Roboto', sans-serif;
@@ -49,52 +45,21 @@ const html = `<!DOCTYPE html>
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     header {
       padding: 20px;
       display: flex;
       align-items: center;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.3);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
+    header img { height: 50px; margin-right: 15px; }
+    header h1 { font-size: 1.8rem; font-weight: 700; }
 
-    header img {
-      height: 50px;
-      margin-right: 15px;
-      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
-    }
-
-    header h1 {
-      font-weight: 700;
-      font-size: 1.8rem;
-      letter-spacing: 2px;
-    }
-
-    main {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    main h2 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    }
-
-    main p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    }
+    main { flex: 1; padding: 40px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
+    main h2 { font-size: 2.4rem; margin-bottom: 20px; }
+    main p { font-size: 1.2rem; line-height: 1.6; margin-bottom: 30px; }
 
     .btn {
       display: inline-block;
@@ -104,50 +69,31 @@ const html = `<!DOCTYPE html>
       font-weight: 700;
       text-decoration: none;
       border-radius: 30px;
-      box-shadow: 0 5px 15px rgba(255, 111, 97, 0.6);
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-      font-size: 1.1rem;
+      transition: 0.3s;
     }
+    .btn:hover { background: #ff3b2e; }
 
-    .btn:hover {
-      background: #ff3b2e;
-      box-shadow: 0 8px 20px rgba(255, 59, 46, 0.8);
-    }
+    section { margin: 60px auto; text-align: center; max-width: 900px; }
+    section h3 { font-size: 1.8rem; margin-bottom: 15px; }
+    section p { font-size: 1rem; margin-bottom: 15px; }
+
+    .faq { text-align: left; max-width: 800px; margin: 0 auto; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h4 { font-size: 1.2rem; margin-bottom: 5px; color: #ffdf5d; }
+    .faq-item p { font-size: 1rem; color: #eee; }
 
     footer {
       background: rgba(0, 0, 0, 0.3);
-      padding: 15px 20px;
+      padding: 20px;
       text-align: center;
       font-size: 0.9rem;
       color: #ddd;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     }
 
     @keyframes bgMove {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    @media (max-width: 600px) {
-      main h2 {
-        font-size: 1.8rem;
-      }
-
-      main p {
-        font-size: 1rem;
-      }
-
-      .btn {
-        padding: 12px 25px;
-        font-size: 1rem;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
@@ -159,24 +105,58 @@ const html = `<!DOCTYPE html>
 
   <main>
     <h2>Unlimited Virtual Visa Cards for Online Shopping, Subscriptions & Freelancers</h2>
-    <p>
-      VextaPay helps you create secure, multi-currency virtual cards with simple KYC. For only $5, access unlimited Visa cards, global payments, and secure online transactions. Great for freelancers, e-commerce users, travelers, and subscription management.
-    </p>
+    <p>VextaPay helps you create secure, multi-currency virtual cards with simple KYC. For only $5, access unlimited Visa cards, global payments, and secure online transactions. Great for freelancers, e-commerce users, travelers, and subscription management.</p>
     <a href="https://vextapay.com" class="btn" target="_blank" rel="noopener noreferrer">Create Your First Card 🚀</a>
+
+    <!-- Features -->
+    <section>
+      <h3>🌍 Why Choose VextaPay?</h3>
+      <p>✔ Unlimited virtual Visa cards for just $5<br/>
+         ✔ Multi-currency support for global payments<br/>
+         ✔ Simple, fast KYC verification<br/>
+         ✔ Perfect for freelancers, businesses & digital nomads</p>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h3>❓ Frequently Asked Questions</h3>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>💳 How much does it cost?</h4>
+          <p>Just $5 to get unlimited virtual Visa cards. No hidden fees.</p>
+        </div>
+        <div class="faq-item">
+          <h4>🌍 Can I use VextaPay internationally?</h4>
+          <p>Yes! Our cards support multiple currencies and work worldwide where Visa is accepted.</p>
+        </div>
+        <div class="faq-item">
+          <h4>🛡️ Is my data secure?</h4>
+          <p>We use bank-level encryption and comply with UK financial regulations for maximum security.</p>
+        </div>
+        <div class="faq-item">
+          <h4>📑 Do I need KYC?</h4>
+          <p>Yes, simple KYC is required to ensure compliance with regulations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section>
+      <h3>🚀 Start Today</h3>
+      <p>Join thousands of users already enjoying secure online payments with VextaPay.</p>
+      <a href="https://vextapay.com" class="btn">Get Started Now</a>
+    </section>
   </main>
 
   <footer>
     &copy; 2025 Vexa Ltd. | Business Name: VextaPay | Company Number: 16373129<br/>
-    Registered Office: 63 Trafalgar Street, Oldham, England, OL1 2HW
+    Registered Office: 63 Trafalgar Street, Oldham, England, OL1 2HW<br/>
+    <a href="https://github.com/vextapay" target="_blank" style="color:#ffdf5d;">GitHub</a> |
+    <a href="mailto:support@vextapay.com" style="color:#ffdf5d;">Contact Support</a>
   </footer>
 </body>
 </html>`;
 
-/**
- * Cloudflare Worker fetch handler
- * @param {Request} request - Incoming HTTP request
- * @returns {Promise<Response>} - HTML response
- */
 export default {
   async fetch(request) {
     try {

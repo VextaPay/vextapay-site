@@ -1,6 +1,6 @@
 /**
  * VextaPay Landing Page Worker
- * Serves a professional static HTML landing page.
+ * Serves a professional static HTML landing page with SEO optimization.
  */
 
 const html = `<!DOCTYPE html>
@@ -8,9 +8,25 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VextaPay - Secure Virtual Cards & Multi-Currency Payments</title>
-  <meta name="description" content="VextaPay offers virtual Visa cards with multi-currency support, secure online payments, and easy KYC verification. Get unlimited cards for just $5 and pay internationally hassle-free." />
-  
+  <title>VextaPay - Virtual Visa Cards & Multi-Currency Online Payments</title>
+  <meta name="description" content="VextaPay provides secure, fast, and low-cost virtual Visa cards. Instantly create unlimited cards, verify with simple KYC, and pay globally in multiple currencies for just $5. Ideal for e-commerce, freelancers, and digital nomads." />
+  <meta name="keywords" content="virtual visa cards, online payments, virtual debit cards, multi-currency card, VextaPay, UK fintech, international payments, KYC, online shopping card" />
+  <meta name="author" content="VextaPay" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="VextaPay - Virtual Visa Cards & Global Payments" />
+  <meta property="og:description" content="Secure, unlimited virtual Visa cards. Accept and pay globally with ease. Powered by VextaPay." />
+  <meta property="og:image" content="https://i.postimg.cc/D024frNL/fulllogo-transparent-nobuffer.png" />
+  <meta property="og:url" content="https://vextapay.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VextaPay - Virtual Visa Cards for Global Payments" />
+  <meta name="twitter:description" content="Create secure virtual cards instantly. Only $5 for unlimited cards. Pay worldwide in multiple currencies." />
+  <meta name="twitter:image" content="https://i.postimg.cc/D024frNL/fulllogo-transparent-nobuffer.png" />
+
   <!-- Favicon -->
   <link rel="icon" href="https://i.postimg.cc/1XdzYfqk/vestapay-logo.png" type="image/png" />
 
@@ -142,15 +158,16 @@ const html = `<!DOCTYPE html>
   </header>
 
   <main>
-    <h2>Secure Virtual Visa Cards for Worldwide Payments 🌍💳</h2>
+    <h2>Unlimited Virtual Visa Cards for Online Shopping, Subscriptions & Freelancers</h2>
     <p>
-      Open your VextaPay account with simple KYC verification and get unlimited virtual cards for just $5. Enjoy multi-currency support and hassle-free international payments. Perfect for online shopping, subscriptions, and more!
+      VextaPay helps you create secure, multi-currency virtual cards with simple KYC. For only $5, access unlimited Visa cards, global payments, and secure online transactions. Great for freelancers, e-commerce users, travelers, and subscription management.
     </p>
-    <a href="https://vextapay.com" class="btn" target="_blank" rel="noopener noreferrer">Get Started 🚀</a>
+    <a href="https://vextapay.com" class="btn" target="_blank" rel="noopener noreferrer">Create Your First Card 🚀</a>
   </main>
 
   <footer>
-    &copy; 2025 Vexa Ltd. | Business Name: VextaPay | 63 Trafalgar Street, Oldham, England, OL1 2HW
+    &copy; 2025 Vexa Ltd. | Business Name: VextaPay | Company Number: 16373129<br/>
+    Registered Office: 63 Trafalgar Street, Oldham, England, OL1 2HW
   </footer>
 </body>
 </html>`;
@@ -178,4 +195,3 @@ export default {
     }
   },
 };
-
